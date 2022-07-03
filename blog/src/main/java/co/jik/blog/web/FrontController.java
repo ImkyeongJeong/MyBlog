@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.jik.blog.common.Command;
 import co.jik.blog.home.Home;
+import co.jik.blog.login.LoginForm;
+import co.jik.blog.profile.Profile;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -25,6 +27,8 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new Home());
+		map.put("/profile.do", new Profile());
+		map.put("/loginForm.do", new LoginForm());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
