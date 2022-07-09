@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import co.jik.blog.common.Command;
 import co.jik.blog.home.Home;
 import co.jik.blog.login.LoginForm;
+import co.jik.blog.post.Post;
 import co.jik.blog.profile.Profile;
 
 @WebServlet("*.do")
@@ -29,6 +30,7 @@ public class FrontController extends HttpServlet {
 		map.put("/home.do", new Home());
 		map.put("/profile.do", new Profile());
 		map.put("/loginForm.do", new LoginForm());
+		map.put("/post.do", new Post());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
